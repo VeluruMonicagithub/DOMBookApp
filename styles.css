@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* --- Home Page (index.html) Styles --- */
+.home-page {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.home-page h1 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* --- Admin Page (admin.html) Styles --- */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header nav {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Form Styles */
+.form-section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.form-section h2 {
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+#addBookForm label, 
+#addBookForm input, 
+#addBookForm select, 
+#addBookForm button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#addBookForm input, 
+#addBookForm select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button Styling */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Controls Section (Sort/Filter) */
+.controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.sort-options button {
+    margin-right: 10px;
+    background-color: #6c757d;
+}
+
+.sort-options button:hover {
+    background-color: #5a6268;
+}
+
+#filterCategory {
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Book Grid Display */
+.display-section h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grid Layout */
+    gap: 20px;
+    /* Center the grid content visually */
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.book-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Good box shadow */
+    text-align: center;
+    overflow: hidden;
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.book-card h4 {
+    color: #007bff;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.book-card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.book-card .delete-btn {
+    background-color: #dc3545;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 0.9em;
+}
+
+.book-card .delete-btn:hover {
+    background-color: #c82333;
+}
