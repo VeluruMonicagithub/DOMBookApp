@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page | Book Management</title>
+    <title>Admin Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -19,10 +19,8 @@
             <form id="addBookForm">
                 <label for="title">Title:</label>
                 <input type="text" id="title" required>
-
                 <label for="author">Author:</label>
                 <input type="text" id="author" required>
-
                 <label for="category">Category:</label>
                 <select id="category" required>
                     <option value="" disabled selected>Select a Category</option>
@@ -30,18 +28,15 @@
                     <option value="Comedy">Comedy</option>
                     <option value="Technical">Technical</option>
                 </select>
-
                 <button type="submit">Add Book</button>
             </form>
         </section>
-
         <section class="controls-section">
             <div class="sort-options">
                 <h3>Sort by Title:</h3>
                 <button id="sortAZ">A → Z</button>
                 <button id="sortZA">Z → A</button>
             </div>
-
             <div class="filter-options">
                 <h3>Category filtering</h3>
                 <select id="filterCategory">
@@ -52,7 +47,6 @@
                 </select>
             </div>
         </section>
-
         <section class="display-section">
             <h2>Available Books</h2>
             <div id="booksDisplay" class="book-grid">
