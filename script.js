@@ -12,13 +12,13 @@ const noBooksMessage = document.getElementById('noBooksMessage');
 function renderBooks(filterCategory = filterCategoryDropdown.value) {
     let booksToRender = books;
 
-    if (filterCategory !== 'All') {
+    if (filterCategory !== 'All'){
         booksToRender = books.filter(book => book.category === filterCategory);
     }
     
     booksDisplay.innerHTML = '';
 
-    if (booksToRender.length === 0) {
+    if (booksToRender.length === 0){
         noBooksMessage.style.display = 'block';
         booksDisplay.appendChild(noBooksMessage);
         return;
@@ -26,7 +26,7 @@ function renderBooks(filterCategory = filterCategoryDropdown.value) {
         noBooksMessage.style.display = 'none';
     }
 
-    booksToRender.forEach((book, index) => {
+    booksToRender.forEach((book, index) =>{
         const card = document.createElement('div');
         card.className = 'book-card';
         card.setAttribute('data-index', book.originalIndex); 
@@ -42,12 +42,12 @@ function renderBooks(filterCategory = filterCategoryDropdown.value) {
         booksDisplay.appendChild(card);
     });
 
-    document.querySelectorAll('.delete-btn').forEach(button => {
+    document.querySelectorAll('.delete-btn').forEach(button =>{
         button.addEventListener('click', handleDelete);
     });
 }
 
-function handleAddBook(event) {
+function handleAddBook(event){
     event.preventDefault();
 
     const newBook = {
@@ -68,7 +68,7 @@ function handleAddBook(event) {
     renderBooks(); 
 }
 
-function handleDelete(event) {
+function handleDelete(event){
     const indexToDelete = parseInt(event.target.getAttribute('data-index'));
     
     books = books.filter(book => book.originalIndex !== indexToDelete);
@@ -80,12 +80,12 @@ function handleDelete(event) {
     renderBooks(); 
 }
 
-function handleSort(direction) {
+function handleSort(direction){
     books.sort((a, b) => {
         const titleA = a.title.toUpperCase();
         const titleB = b.title.toUpperCase();
         
-        if (direction === 'az') {
+        if (direction === 'az'){
             return (titleA < titleB) ? -1 : (titleA > titleB) ? 1 : 0;
         } else {
             return (titleA > titleB) ? -1 : (titleA < titleB) ? 1 : 0;
